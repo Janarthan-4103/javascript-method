@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>string reverse</h1>
+ Text
+    <input type="text" id="st">
+    <button onclick="f()">Click</button>
+<script>
+    function f()
+    {
+        var a=document.getElementById("st").value;
+        var b=a.length;
+        for(i=b-1; i>=0; i--){
+        document.write(a[i]);
+        } 
+    }
+</script>
+
+<h1>Reverse letter</h1>
+Text
+   <input type="text" id="let">
+   <button onclick="f1()">Click</button>
+<script>
+    function f1()
+    {
+       var a=document.getElementById("let").value;
+       var b=a.length
+       
+       for(i=b-1; i>=0; i--){
+        document.write(a[i])
+       }
+    }
+</script> 
+
+<h1>Combine</h1>
+Text
+   <input type="text" id="c">
+   <input type="text" id="c1">
+   <button onclick="f2()">Click</button>
+<script>
+    function f2()
+    {
+        var x=document.getElementById("c").value;
+        var y=document.getElementById("c1").value;
+        var z=x.concat(" "+y);
+        document.write(z);
+    }
+</script> 
+
+<h1>Remove duplicates</h1>
+Text
+   <input type="text" id="rd">
+   <button onclick="f3()">Click</button>
+<script>
+    //function f3()
+    
+        var c=[1,2,2,3,4,8,5,5,6,7,2,8,9,]
+        //var a=document.getElementById("rd").value;
+        c.sort();
+        var b= [... new Set(c)];
+        document.write(b);
+</script> 
+
+<h1>Center value</h1>
+<script>
+    var x=[2,3,1,4,6,8,9,8,4,5,1,7]
+    x.sort();
+    var y= [... new Set(x)];
+    //document.write(y)
+    var z=y.length;
+    var i=z/2;
+    var j=Math.floor(i);
+    document.write(j)    
+</script>
+
+<h1>Increase or Decrease</h1>
+Text
+   <input type="number" id="iod">
+   <button onclick="f3()">Increase</button>
+   <button onclick="f4()">Decrease</button>
+   <p id="demo">Answer</p>
+   <script>
+    function f3()
+    {
+        var x=parseInt(document.getElementById("iod").value);
+        x=x+1;
+        document.getElementById("demo").innerHTML=x
+    }
+    function f4(){
+        var y=parseInt(document.getElementById("iod").value);
+        y=y-1;
+        document.getElementById("demo").innerHTML=y
+    }
+   </script>
+
+<h1>Reverse</h1>
+Text
+   <input type="text" id="reverse">
+   <button onclick="f5()">Click</button>
+<script>
+    function f5()
+    {
+     var x = document.getElementById("reverse").value;
+     var y = x.split("")
+     var z=y.reverse().join("");
+     if(x==z){
+       
+        document.write("True")
+    }
+    else{
+       
+        document.write("False")
+    }
+    }
+</script>
+
+<h1>Consonants & Vowels</h1>
+Text
+   <input type="text" id="cv">
+   <button onclick="f6()">Click</button>
+<script>
+    function f6()
+    {
+        var x=document.getElementById("cv").value;
+        var y=x.split("");
+        var z=y.length
+        var vow=0;
+        var con=0;
+        
+        for(i=0; i<=z-1; i++)
+        {
+        if(y[i]=='a' || y[i]=='e' || y[i]=='i' || y[i]=='o' || y[i]=='u')
+        {
+          vow=vow+1;
+        }
+        else
+        {
+            con=con+1;
+           
+        }
+        }
+       
+       document.write("Vowels:",vow,"<br>");
+       document.write("Consonants:",con);
+    }
+</script> 
+
+
+<h1>Calculator</h1>
+Number1
+     <input type="number" id="n1"><br><br>
+Number2
+     <input type="number" id="n2"><br><br>
+   <button onclick="f7()">+</button> 
+   <button onclick="f71()">-</button>
+   <button onclick="f72()">*</button>
+   <button onclick="f73()">/</button><br><br>
+   <button onclick="clear()">Clear</button>
+   <p id="demo3">Answer</p>
+   <script>
+    function clear()
+    {
+       
+       document.getElementById("demo3").reset();
+    }
+    function f7()
+    {
+      let a=parseInt(document.getElementById("n1").value);
+      let b=parseInt(document.getElementById("n2").value);
+      let x=a+b;
+      document.getElementById("demo3").innerHTML=(x);
+    }
+    function f71()
+    {
+      let a=parseInt(document.getElementById("n1").value);
+      let b=parseInt(document.getElementById("n2").value);
+      let x=a-b;
+      document.getElementById("demo3").innerHTML=(x);
+    }function f72()
+    {
+      let a=parseInt(document.getElementById("n1").value);
+      let b=parseInt(document.getElementById("n2").value);
+      let x=a*b;
+      document.getElementById("demo3").innerHTML=(x);
+    }
+    function f73()
+    {
+      let a=parseInt(document.getElementById("n1").value);
+      let b=parseInt(document.getElementById("n2").value);
+      let x=a/b;
+      document.getElementById("demo3").innerHTML=(x);
+    }
+   </script> 
+
+<h1>Rupees</h1>
+   value
+     <input type="number" id="rup">
+     <button onclick="f8()">Click</button>
+   <script>
+    function f8()
+    {
+        var a=parseInt(document.getElementById("rup").value);
+        var b=[500,100,50,20,10,5,2,1]
+        var c=b.length;
+        
+        for(i=0; i<=c; i++)
+        {
+           
+        }
+    }
+   </script> 
+</body>
+</html>
